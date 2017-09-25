@@ -408,33 +408,33 @@ import CoreGraphics
         
         xCursor = centerPoint.x
         
-        startAngle = CGFloat(M_PI)
+        startAngle = CGFloat(Double.pi)
         endAngle = -angle
         
       } else if(i < nbPoint - 1) {
         
-        startAngle = CGFloat(M_PI) + angle
+        startAngle = CGFloat(Double.pi) + angle
         endAngle = -angle
         
       } else if(i == (nbPoint - 1)){
         
-        startAngle = CGFloat(M_PI) + angle
+        startAngle = CGFloat(Double.pi) + angle
         endAngle = 0
         
       } else if(i == nbPoint) {
         
         startAngle = 0
-        endAngle = CGFloat(M_PI) - angle
+        endAngle = CGFloat(Double.pi) - angle
         
       } else if (i < (2 * nbPoint - 1)) {
         
         startAngle = angle
-        endAngle = CGFloat(M_PI) - angle
+        endAngle = CGFloat(Double.pi) - angle
         
       } else {
         
         startAngle = angle
-        endAngle = CGFloat(M_PI)
+        endAngle = CGFloat(Double.pi)
         
       }
       
@@ -488,7 +488,7 @@ import CoreGraphics
    
    - parameter gestureRecognizer: The gesture recognizer responsible for the action
    */
-  func gestureAction(_ gestureRecognizer: UIGestureRecognizer) {
+  @objc func gestureAction(_ gestureRecognizer: UIGestureRecognizer) {
     if(gestureRecognizer.state == UIGestureRecognizerState.ended ||
       gestureRecognizer.state == UIGestureRecognizerState.changed ) {
       
